@@ -101,13 +101,6 @@ LOGGING = {
     },
 
     'handlers': {
-        'file': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': os.path.join(BASE_DIR, 'logs/repository.log'),
-            'formatter': 'simple',    
-        },
-
         'console': {
             'class': 'logging.StreamHandler',
             'formatter': 'simple',
