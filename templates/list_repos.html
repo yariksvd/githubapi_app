@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>List of repositories</title>
+        <style>
+            table {
+              font-family: arial, sans-serif;
+              border-collapse: collapse;
+              width: 100%;
+            }
+            
+            td, th {
+              border: 1px solid #dddddd;
+              text-align: left;
+              padding: 8px;
+            }
+            
+            tr:nth-child(even) {
+              background-color: #dddddd;
+            }
+        </style>
+    </head>
+<body>
+    <h2>List of repositories</h2>
+
+    <table>
+        <tr>
+            <th>name</th>
+            <th>id</th>
+        </tr>
+        {% for repo in repositories %}
+        <tr>
+            <td>{{ repo.name }}</td>
+            <td><a href="{% url 'detail_repo' repo.id %}">{{ repo.id }}</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

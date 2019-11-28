@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Detail repository</title>
+        <style>
+            table {
+              font-family: arial, sans-serif;
+              border-collapse: collapse;
+              width: 100%;
+            }
+            
+            td, th {
+              border: 1px solid #dddddd;
+              text-align: left;
+              padding: 8px;
+            }
+            
+            tr:nth-child(even) {
+              background-color: #dddddd;
+            }
+        </style>
+    </head>
+<body>
+    {% if repository %}
+    <h1>{{ repository.name }}</h1>
+    <table>
+        <tr>
+            <th>html_url</th>
+            <th>description</th>
+            <th>private</th>
+            <th>created_at</th>
+            <th>watchers</th>
+        </tr>
+        <tr>
+            <td>{{ repository.html_url }}</td>
+            <td>{{ repository.description }}</td>
+            <td>{{ repository.private }}</td>
+            <td>{{ repository.created_at }}</td>
+            <td>{{ repository.watchers }}</td>
+        </tr>
+        </table>
+    {% endif %}
+</body>
+</html>
